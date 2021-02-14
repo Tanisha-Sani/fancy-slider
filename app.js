@@ -76,10 +76,10 @@ const createSlider = () => {
   <span class="prev" onclick="changeItem(-1)"><i class="fas fa-chevron-left"></i></span>
   <span class="next" onclick="changeItem(1)"><i class="fas fa-chevron-right"></i></span>
   `;
-
+   
   sliderContainer.appendChild(prevNext)
   document.querySelector('.main').style.display = 'block';
-  
+
   // hide image aria
   imagesArea.style.display = 'none';
   const duration = document.getElementById('duration').value || 1000;
@@ -146,7 +146,7 @@ const stopNegativeValue = () =>{
     document.querySelector('.main').style.display = 'block';
   }
   else if(duration < 0){
-    alert("Negative value isn't allowed");
+    alert("Negative value isn't Supported");
     document.querySelector('.main').style.display = 'none';
     imagesArea.style.display = 'block';
   }
@@ -159,3 +159,9 @@ const searchBtnLoading = () =>{
 const loading=document.getElementById("search-loading");
 loading.classList.toggle('d-none');
 }
+
+// // (2) add new features
+// const showPreviousBtn = () =>{
+// const newButton = document.getElementById('new-btn');
+// newButton.style.display ="block";
+// }
